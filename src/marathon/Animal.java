@@ -21,9 +21,9 @@ public class Animal implements Competitor {
     @Override
     public void run(int dist) {
         if (dist <= maxRunDistance){
-            System.out.println(name + " цвета " + color + " пробегает " + dist + "km");
+            //System.out.println(name + " цвета " + color + " пробегает " + dist + "km");
         }else {
-            System.out.println(name + " цвета " + color + " не пробегает " + dist + "km");
+            //System.out.println(name + " цвета " + color + " не пробегает " + dist + "km");
             onDistance = false;
         }
     }
@@ -31,9 +31,9 @@ public class Animal implements Competitor {
     @Override
     public void swim(int dist) {
         if (dist <= maxSwimDistance){
-            System.out.println(name + " цвета " + color + " проплывает " + dist + "km");
+            //System.out.println(name + " цвета " + color + " проплывает " + dist + "km");
         }else {
-            System.out.println(name + " цвета " + color + " не проплывает " + dist + "km");
+            //System.out.println(name + " цвета " + color + " не проплывает " + dist + "km");
             onDistance = false;
         }
     }
@@ -41,9 +41,9 @@ public class Animal implements Competitor {
     @Override
     public void jump(int height) {
         if (height <= maxJumpHeight){
-            System.out.println(name + " цвета " + color + " перепрыгивает " + height + "m");
+            //System.out.println(name + " цвета " + color + " перепрыгивает " + height + "m");
         }else {
-            System.out.println(name + " цвета " + color + " не перепрыгивает " + height + "m");
+            //System.out.println(name + " цвета " + color + " не перепрыгивает " + height + "m");
             onDistance = false;
         }
     }

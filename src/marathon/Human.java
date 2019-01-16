@@ -19,9 +19,9 @@ public class Human implements Competitor {
     @Override
     public void run(int dist) {
         if (dist <= maxRunDistance){
-            System.out.println(name + " пробегает " + dist + "km");
+            //System.out.println(name + " пробегает " + dist + "km");
         }else {
-            System.out.println(name + " не пробегает " + dist + "km");
+            //System.out.println(name + " не пробегает " + dist + "km");
             onDistance = false;
         }
     }
@@ -29,9 +29,9 @@ public class Human implements Competitor {
     @Override
     public void swim(int dist) {
         if (dist <= maxSwimDistance){
-            System.out.println(name +" проплывает " + dist + "km");
+            //System.out.println(name +" проплывает " + dist + "km");
         }else {
-            System.out.println(name + " не проплывает " + dist + "km");
+            //System.out.println(name + " не проплывает " + dist + "km");
             onDistance = false;
         }
     }
@@ -39,9 +39,9 @@ public class Human implements Competitor {
     @Override
     public void jump(int height) {
         if (height <= maxJumpHeight){
-            System.out.println(name +" перепрыгивает " + height + "m");
+            //System.out.println(name +" перепрыгивает " + height + "m");
         }else {
-            System.out.println(name + " не перепрыгивает " + height + "m");
+            //System.out.println(name + " не перепрыгивает " + height + "m");
             onDistance = false;
         }
     }
