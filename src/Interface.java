@@ -1,5 +1,3 @@
-package lesson1;
-
 public interface Interface {
     public int A = 1;
     public void method();

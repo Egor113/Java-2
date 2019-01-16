@@ -1,4 +1,4 @@
-package lesson1.marathon;
+package marathon;
 
 public class Road extends Obstacle {
     private int dist;

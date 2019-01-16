@@ -1,4 +1,4 @@
-package lesson1.marathon;
+package marathon;
 
 public interface Competitor {
 

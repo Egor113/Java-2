@@ -1,4 +1,4 @@
-package lesson1.marathon;
+package marathon;
 
 public class Dog extends Animal {
     public Dog(String name, String color, int maxRunDistance, int maxSwimDistance, int maxJumpHeight) {

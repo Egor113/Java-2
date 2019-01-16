@@ -1,5 +1,3 @@
-package lesson1;
-
 public abstract class Animal {
     protected String color;
     protected String name;

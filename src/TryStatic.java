@@ -1,5 +1,3 @@
-package lesson1;
-
 public class TryStatic {
     static String name = "hello";
 
