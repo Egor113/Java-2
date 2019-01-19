@@ -1,5 +1,3 @@
-package com.company;
-
 public class MyArraySizeException extends ArrayIndexOutOfBoundsException{
     public MyArraySizeException(int index) {
         super(index);
