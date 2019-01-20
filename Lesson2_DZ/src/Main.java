@@ -8,30 +8,28 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         String[][] arr = inputArray();
-        System.out.println(sum(arr));
-
-    }
-    public static int sum(String[][] arr){
-//        if (n!=4 || m!=4){
-//            throw new Exception();
-//        }
-        int sum = 0;
-        try{
-            for (int i = 0; i < 4; i++) {
-                for (int j = 0; j < 4; j++) {
-//                    try{
-//
-//                    }
-                    sum+= Integer.parseInt(arr[i][j]);
-                }
-            }
+        printArray(arr);
+        try {
+            System.out.println("Сумма элементов массива: " + sum(arr));
         }
         catch (MyArraySizeException ex){
-            ex.getMessage();
+            System.out.println(ex.getMessage());
+        }
+        catch (MyArrayDataException ex){
+            System.out.println(ex.getMessage() + ": [" + ex.getN() + "][" + ex.getM() + "]");
         }
 
-
-        return 0;
+    }
+    public static int sum(String[][] arr)throws MyArrayDataException {
+        if (n != 4 || m != 4) throw new MyArraySizeException("Неверный размер массива");
+        int sum = 0;
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+                if (!isInteger(arr[i][j])) throw new MyArrayDataException("Неверный формат данных в ячейке", i,j);
+                sum+= Integer.parseInt(arr[i][j]);
+            }
+        }
+        return sum;
     }
 
     public static String[][] inputArray() throws IOException {
@@ -47,16 +45,32 @@ public class Main {
                 array[i][j] = reader.readLine();
             }
         }
-        System.out.println("Исходный массив строк:");
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
-                System.out.print(array[i][j] + " ");
-            }
-            System.out.println();
-        }
         Main.n = n;
         Main.m = m;
         return array;
     }
+
+    public static void printArray(String[][] array){
+        System.out.println();
+        System.out.println("Исходный массив строк:");
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                System.out.print(array[i][j] + "  ");
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
+
+    public static boolean isInteger(String s) {
+        try {
+            Integer.parseInt(s);
+        }
+        catch(NumberFormatException e) {
+            return false;
+        }
+        return true;
+    }
 }
+
 
