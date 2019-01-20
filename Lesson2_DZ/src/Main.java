@@ -4,8 +4,8 @@ import java.io.InputStreamReader;
 
 public class Main {
 
-    public static int n,// Число строк в массиве
-            m; //Число столбцов в массиве
+    public static int n,// Количество строк в массиве
+            m; //Количество столбцов в массиве
 
     public static void main(String[] args) throws IOException {
         String[][] arr = inputArray();
@@ -36,9 +36,9 @@ public class Main {
     //Метод для ввода массива с клавиатуры
     public static String[][] inputArray() throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Введите число строк массива");
+        System.out.println("Введите количество строк массива");
         int n = Integer.parseInt(reader.readLine());
-        System.out.println("Введите столбцов массива");
+        System.out.println("Введите количество столбцов массива");
         int m = Integer.parseInt(reader.readLine());
         System.out.println("Введите массив строк, каждый элемент с новой строки");
         String [][] array = new String[n][m];
@@ -63,7 +63,7 @@ public class Main {
         }
         System.out.println();
     }
-    //Метод проверки, явлется строка целочисленным числом или нет
+    //Метод проверки, явлется строка целочисленным Количеством или нет
     public static boolean isInteger(String s) {
         try {
             Integer.parseInt(s);
